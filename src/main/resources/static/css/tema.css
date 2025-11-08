@@ -1,0 +1,278 @@
+/* Configurações gerais do tema claro */
+:root {
+    --bg: #f5f5f5;
+    --text: #333333;
+    --card: #ffffff;
+    --muted: #666666;
+    --primary: #007BFF;
+    --table-bg: #ffffff;
+    --table-header-bg: #2c3e50;
+    --table-header-text: #ffffff;
+    --table-row-hover: #f1f1f1;
+    --border-color: #ccc;
+    /* Botões */
+    --btn-tema-bg: #e0e0e0;        /* mudança de tema */
+    --btn-tema-text: #222222;
+    --btn-analise-bg: #2ecc71;     /* verde */
+    --btn-analise-hover: #27ae60;
+    --btn-editar-bg: #3498db;      /* azul */
+    --btn-editar-hover: #2980b9;
+    --btn-excluir-bg: #e74c3c;     /* vermelho */
+    --btn-excluir-hover: #c0392b;
+    --btn-novo-bg: #f39c12;        /* laranja */
+    --btn-novo-hover: #e67e22;
+    --btn-text: #fff;              /* texto dos botões */
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+header, .card, form {
+    background-color: var(--card);
+    color: var(--text);
+}
+
+/* Configurações gerais do tema escuro */
+body.dark-mode {
+    --bg: #121212;
+    --text: #e6e6e6;
+    --card: #1f1f1f;
+    --muted: #aaaaaa;
+    --primary: #4ea8ff;
+    --table-bg: #1e1e1e;
+    --table-header-bg: #333333;
+    --table-header-text: #e6e6e6;
+    --table-row-hover: #2a2a2a;
+    --border-color: #444;
+    /* Botões */
+    --btn-generico-bg: #2b2b2b;        /* botão genérico */
+    --btn-generico-text: #ffffff;
+    --btn-analise-bg: #27ae60;     /* verde */
+    --btn-analise-hover: #1e8449;
+    --btn-editar-bg: #2980b9;      /* azul */
+    --btn-editar-hover: #2471a3;
+    --btn-excluir-bg: #c0392b;     /* vermelho */
+    --btn-excluir-hover: #922b21;
+    --btn-novo-bg: #e67e22;        /* laranja */
+    --btn-novo-hover: #ca6f1e;
+    --btn-text: #fff;              /* texto dos botões */
+}
+
+body.dark-mode header,
+body.dark-mode .card,
+body.dark-mode form {
+    background-color: var(--card);
+    color: var(--text);
+}
+
+/* Botão de alterar o tema */
+.tema-container {
+    text-align: right;
+    margin: 8px 0;
+}
+
+#alternar-tema {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--btn-generico-bg);
+    color: var(--btn-generico-text);
+    transition: transform 0.12s ease, opacity 0.12s ease, background-color 150ms ease;
+}
+
+#alternar-tema:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+/* Tabela */
+table {
+    width: 75%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--table-bg);
+    color: var(--text);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+th {
+    background-color: var(--table-header-bg);
+    color: var(--table-header-text);
+}
+
+tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+/* Botões */
+button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
+  color: var(--btn-text);
+}
+body.dark-mode button {
+  box-shadow: none;
+}
+
+/* === Variações === */
+button.analise,
+button.salvar {
+  background-color: var(--btn-analise-bg);
+}
+button.analise:hover,
+button.salvar:hover {
+  background-color: var(--btn-analise-hover);
+}
+
+button.editar {
+  background-color: var(--btn-editar-bg);
+}
+button.editar:hover {
+  background-color: var(--btn-editar-hover);
+}
+
+button.excluir,
+button.cancelar {  /* ambas usam vermelho */
+  background-color: var(--btn-excluir-bg);
+}
+button.excluir:hover,
+button.cancelar:hover {
+  background-color: var(--btn-excluir-hover);
+}
+
+button.novo-filme {
+  background-color: var(--btn-novo-bg);
+  display: block;
+  margin: 25px auto;
+  width: 40%;
+  height: 40px;
+  font-size: 15px;
+}
+button.novo-filme:hover {
+  background-color: var(--btn-novo-hover);
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+    text-align: center;
+    transition: color 200ms ease;
+}
+
+h1 {
+    color: #222;
+}
+h2 {
+    color: #333;
+}
+h3 {
+    color: #444;
+}
+h4 {
+    color: #555;
+}
+
+body.dark-mode h1 {
+    color: #eaeaea;
+}
+body.dark-mode h2 {
+    color: #d5d5d5;
+}
+body.dark-mode h3 {
+    color: #bfbfbf;
+}
+body.dark-mode h4 {
+    color: #aaaaaa;
+}
+
+/* Campos de form */
+input, textarea, select {
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: #e6e6e6;
+    border-color: #555;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    border-color: var(--primary);
+}
+
+/* Cartão de análise */
+.analise-card {
+    background-color: var(--card-bg, #f5f5f5);
+    color: var(--text-color, #222);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.analise-content {
+    margin-bottom: 0px;
+}
+
+.analise-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0px;
+}
+
+.analise-actions button {
+    border: none;
+    background-color: var(--btn-generico-bg, #ddd);
+    color: var(--btn-generico--text, #222);
+    padding: 5px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.analise-actions button:hover {
+    background-color: var(--button-hover, #ccc);
+}
+
+body.dark-mode .analise-card {
+    background-color: #1f1f1f;
+    color: #e6e6e6;
+    border-color: #444;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .analise-nota {
+    color: #aaaaaa;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Filme</title>
+    
+    <!-- Importa estilos CSS -->
+    <link rel="stylesheet" th:href="@{/css/detalhes.css}">
+    <link rel="stylesheet" th:href="@{/css/tema.css}">
+    
+    <!-- Importa o jQuery -->
+    <script th:src="@{https://code.jquery.com/jquery-3.6.0.min.js}"></script>
+    
+    <!-- Importa os scripts da pagina -->
+    <script th:src="@{/js/detalhes.js}"></script>
+    <script th:src="@{/js/tema.js}"></script>
+</head>
+<body>
+    <div class="tema-container">
+        <button id="alternar-tema">🌙 Modo escuro</button>
+    </div>
+    
+    <div class="layout-container">
+        <div class="left-panel">
+            <div id="info-filme" class="card">
+                <h1 id="titulo-filme">Carregando...</h1>
+    
+                <h3 id="genero">Carregando gênero...</h3>
+                
+                <h4>Sinopse</h4>
+                
+                <p id="sinopse"></p>
+            </div>
+
+            <h2>Adicionar Análise</h2>
+
+            <form id="form-analise">
+                <label for="texto">Análise:</label>
+                <textarea id="texto" required></textarea>
+
+                <label for="nota">Nota (0–10):</label>
+                <input type="number" id="nota" step="0.1" min="0" max="10" required>
+
+                <div class="botoes">                   
+                    <button type="button" id="cancelar" class="cancelar">❌ Cancelar</button>
+
+                    <button type="submit" id="publicar" class="publicar">✔ Publicar</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="right-panel">
+            <h2>Análises</h2>
+    
+            <div id="analises-container"></div>
+        </div>
+    </div>
+
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Filmes</title>
+    
+    <!-- Importa estilos CSS -->
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/tema.css}">
+    
+    <!-- Importa o jQuery -->
+    <script th:src="@{https://code.jquery.com/jquery-3.6.0.min.js}"></script>
+    
+    <!-- Importa o script da pagina -->
+    <script th:src="@{/js/index.js}"></script>
+    <script th:src="@{/js/tema.js}"></script>
+</head>
+
+<body>
+    <div class="tema-container">
+        <button id="alternar-tema">🌙 Modo escuro</button>
+    </div>
+
+    <h1>Lista de Filmes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Gênero</th>
+                <th>Ano</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-filmes">
+            <!-- Linhas serão adicionadas via jQuery -->
+
+        </tbody>
+    </table>
+    
+    <!-- Botão para adicionar novos filmes -->
+    <div class="acoes">
+        <button id="novo-filme" class="novo-filme">➕ Novo Filme</button>
+    </div>
+
+</body>
+</html>
