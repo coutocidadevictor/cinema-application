@@ -19,7 +19,7 @@ O front-end utiliza **jQuery** para consumir a API e atualizar a interface de fo
 - **Java 17+**
 - **Spring Boot**
 - **Thymeleaf**
-- **Bootstrap / CSS / JS**
+- **CSS / JS**
 - **jQuery**
 - **MySQL**
 - **Maven**
