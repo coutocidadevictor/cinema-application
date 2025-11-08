@@ -25,23 +25,6 @@ O front-end utiliza **jQuery** para consumir a API e atualizar a interface de fo
 - **Maven**
 
 ---
-
-## ⚙️ Estrutura do projeto
-
-O projeto segue a arquitetura padrão do Spring Boot:
-src/
-
-├── main/
-
-  ├── java/com/atividade/cinema/ # Código-fonte Java
-  
-  ├── resources/
-  
-    ├── static/ # Arquivos CSS e JS
-    
-    ├── templates/ # Páginas HTML (Thymeleaf)
-    
-    └── application.properties # Configurações da aplicação
   
 ## 🗄️ Banco de dados
 
@@ -52,6 +35,8 @@ O script de criação das tabelas está disponível no arquivo: `cinema_api.sql`
 Basta executar esse script em seu servidor MySQL antes de iniciar a aplicação.
 
 As configurações de conexão podem ser ajustadas no arquivo: `src/main/resources/application.properties`
+
+---
 
 ## ⚙️ Execução do projeto
 
