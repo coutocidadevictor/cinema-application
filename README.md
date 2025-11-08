@@ -30,11 +30,17 @@ O front-end utiliza **jQuery** para consumir a API e atualizar a interface de fo
 
 O projeto segue a arquitetura padrão do Spring Boot:
 src/
+
 ├── main/
+
   ├── java/com/atividade/cinema/ # Código-fonte Java
+  
   ├── resources/
+  
     ├── static/ # Arquivos CSS e JS
+    
     ├── templates/ # Páginas HTML (Thymeleaf)
+    
     └── application.properties # Configurações da aplicação
   
 ## 🗄️ Banco de dados
